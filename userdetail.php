@@ -239,8 +239,7 @@ $rows =  $result->fetch_assoc();
 $balance = $rows['balance'];
 
 
-
-$newbal=$rows-$amount;
+$newbal=$balance-$amount;
 $mysqli->query("UPDATE customers set balance=$newbal where srno=$fromid");
 
 $result=$mysqli->query("select balance from customers where srno=$toid");
